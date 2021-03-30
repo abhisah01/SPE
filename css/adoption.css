@@ -1,0 +1,72 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap'); /* heading font */
+@import url('https://fonts.googleapis.com/css2?family=Montez&display=swap'); /* brand name font */
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap'); /* reading texts font */
+
+/* Universal CSS Style */
+* {
+  box-sizing: border-box; /* setting the box property in order to make things simple */
+  margin: 0;
+  padding: 0;
+  transition: 1s; /* transition when the page is opened */
+}
+
+.horizontal_line {
+  width: 15%;
+  border-style: dotted none none;
+  border-color: #00adb5;
+  border-width: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Header Section, or Navigation Bar */
+header {
+  display: flex; /* make child boxes horizontal */
+  align-items: center; /* making all the child boxes center to each other in the parent flex box */
+  justify-content: flex-end; /* sending the elements to the right */
+  padding: 5px 4%; /* top, down is 5px & left, right is 4% */
+  background-color: #000;
+
+  position: fixed; /* fixing the nav bar to the top */
+  width: 100%; /* expand to the screen size */
+  z-index: 10; /* make every animation to go behind the nav bar */
+}
+
+.icon {
+  height: 55px;
+  width: 55px;
+  cursor: pointer; /* makes the pointer to the images */
+}
+
+.brand_name {
+  text-decoration: none; /* removed the underline */
+  font-family: "Montez", sans-serif; /* google font */
+  font-weight: bolder;
+  font-size: 3rem;
+  color: #ff1617;
+  padding-left: 15px;
+  margin-right: auto; /* moving the logo and brand name to the left */
+}
+
+.nav_links {
+  list-style: none; /* removing the dots before every list item */
+}
+
+.nav_item {
+  display: inline-block; /* makes the list items horizontal */
+  padding: 0px 15px; /* top, down is 0px & left, right is 15px */
+}
+
+.nav_item a {
+  font-family: "Gloria Hallelujah", sans-serif; /* google font */
+  font-size: 1.2rem;
+  text-decoration: none; /* removed the underline */
+  color: #fff;
+}
+
+.nav_item a:hover {
+  color: #ff1617;
+}
