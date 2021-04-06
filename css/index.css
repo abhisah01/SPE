@@ -254,10 +254,6 @@ header {
   border-radius: 0.4rem;
 }
 
-/* .donation_image:hover {
-  transform: scale(1.2);
-} */
-
 .donation_lines {
   text-align: center; /* center aligned texts */
   margin-left: 5rem;
@@ -299,10 +295,6 @@ header {
   object-fit: cover; /* fit the image in the given size */
   border-radius: 0.4rem;
   cursor: pointer; /* makes the pointer to the images */
-}
-
-.history_images img:hover {
-  transform: scale(1.2);
 }
 
 .history_description {
@@ -413,6 +405,7 @@ header {
 
 /* Footer Section */
 footer {
+  background-color: #fcf8ec;
   padding: 3rem 10%; /* top, down is 3rem & left, right is 10% */
 }
 
