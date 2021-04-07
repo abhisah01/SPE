@@ -73,62 +73,30 @@ header {
 
 /* Introduction Section */
 .intro_section {
-  display: flex; /* make child boxes horizontal */
-  align-items: center; /* making all the child boxes center to each other in the parent box */
-  padding: 8rem 10% 3rem; /* top is 8rem, down is 3rem & left,right is 10% */
-}
-
-.intro_image {
-  width: 350px;
-  height: 350px;
-  cursor: pointer; /* makes the pointer to the images */
-  object-fit: cover;
-  border-radius: 0.4rem;
-}
-
-.intro_lines {
-  text-align: center; /* center aligned texts */
-  margin-left: 5rem;
+  padding: 6rem 10% 3rem;
 }
 
 .intro_heading {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  font-family: "Gloria Hallelujah", sans-serif; /* google font */
-  color: #00adb5;
-}
-
-.intro_description {
-  font-size: 1.5rem;
-  font-family: "Gaegu", sans-serif; /* google font */
-}
-
-/* Adoption Policies */
-.policies_section {
-  background-color: #d3d6db;
-  padding: 3rem 10%; /* top, down is 3rem & left, right is 10% */
-}
-
-.policies_heading {
   color: #ff1617;
   text-align: center;
   font-size: 3rem;
   font-family: "Gloria Hallelujah", sans-serif; /* google font */
 }
 
-.policies_images {
+.intro_images {
   display: flex; /* making child boxes parallel */
   justify-content: center; /* evenly space between the child boxes */
 }
 
-.policies_images img {
+.intro_images img {
   height: 350px;
-  width: 450px;
+  width: 350px;
+  object-fit: cover; /* fit the image in the given size */
   border-radius: 0.4rem;
   cursor: pointer; /* makes the pointer to the images */
 }
 
-.policies_description {
+.intro_description {
   font-size: 1.5rem;
   font-family: "Gaegu", sans-serif; /* google font */
   text-align: center;
@@ -136,83 +104,36 @@ header {
   padding-bottom: 1.5rem;
 }
 
-/* Form Section */
-.form_section {
-  padding: 3rem 10%; /* top, down is 3rem & left, right is 10% */
-}
-
-.form_heading {
-  color: #ff1617;
-  text-align: center;
-  font-size: 3rem;
-  font-family: "Gloria Hallelujah", sans-serif; /* google font */
-}
-
-.form_description {
-  text-align: center; /* center aligned texts */
-  font-size: 1.5rem;
-  font-family: "Gaegu", sans-serif; /* google font */
-}
-
-.meeting_form {
-  width: 80%;
-  background-color: #fff;
-  margin: 3rem auto;
-  padding: 2rem 2rem;
-  text-align: center;
-  border-radius: 0.5rem;
-  box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
-}
-
-.contact_textbox {
-  border: 0.2rem solid #d3d6db;
-  margin: 1.5rem 5rem;
-  border-radius: 0.5rem;
-}
-
-.contact_textbox input, .contact_textbox textarea {
-  width: 100%;
-  border: none;
-  /* background: none; */
-  outline: none;
-  font-size: 1.5rem;
-  font-family: "Gaegu", sans-serif; /* google font */
-}
-
-.contact_textbox textarea {
-  resize: none;
-}
-
-.contact_label {
-  font-size: 2rem;
-  font-family: "Gaegu", sans-serif; /* google font */
-}
-
-.contact_textbox_selectors {
-  font-size: 1.5rem;
-  font-family: "Gaegu", sans-serif; /* google font */
-  padding: 0.5rem 0rem;
-}
-
-.contact_date_input {
-  font-family: "Gaegu", sans-serif; /* google font */
-  padding: 0.5rem 0rem;
-}
-
-.contact_button {
+/* Donate Money Section */
+.money_section {
+  padding: 3rem 10%;
   background-color: #d3d6db;
+  text-align: center;
+}
+
+.donate_button {
   padding: 1rem 4rem;
   text-decoration: none;
   border-radius: 0.5rem;
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 3rem;
+  font-weight: bolder;
   color: #000;
   font-family: "Gaegu", sans-serif; /* google font */
 }
 
-.contact_button:hover {
+.donate_button:hover {
   color: #ff1617;
 }
+
+
+
+/* Donate Goods Section */
+.goods_section {
+  padding: 3rem 10%; /* top, down is 3rem & left, right is 10% */
+  text-align: center;
+}
+
+
 
 
 /* Footer Section */
