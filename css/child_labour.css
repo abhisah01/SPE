@@ -75,13 +75,14 @@ header {
 .intro_section {
   display: flex; /* make child boxes horizontal */
   align-items: center; /* making all the child boxes center to each other in the parent box */
-  padding: 7.7rem 10% 3rem; /* top is 7.7rem, down is 3rem & left,right is 10% */
+  padding: 8rem 10% 3rem; /* top is 8rem, down is 3rem & left,right is 10% */
 }
 
 .intro_image {
   width: 350px;
   height: 350px;
   cursor: pointer; /* makes the pointer to the images */
+  border-radius: 0.4rem;
 }
 
 .intro_lines {
@@ -127,10 +128,6 @@ header {
   cursor: pointer; /* makes the pointer to the images */
 }
 
-.family_images img:hover {
-  transform: scale(1.2);
-}
-
 .family_description {
   font-size: 1.5rem;
   font-family: "Gaegu", sans-serif; /* google font */
@@ -139,223 +136,25 @@ header {
   padding-bottom: 1.5rem;
 }
 
-/* Adoption Section */
-.adopt_section {
-  display: flex; /* make child boxes horizontal */
-  align-items: center; /* making all the child boxes center to each other in the parent box */
+/* Form Section */
+.form_section {
   padding: 3rem 10%; /* top, down is 3rem & left, right is 10% */
 }
 
-.adopt_lines {
-  text-align: center; /* center aligned texts */
-  margin-right: 5rem;
-}
-
-.adopt_heading {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  font-family: "Gloria Hallelujah", sans-serif; /* google font */
-  color: #00adb5;
-}
-
-.adopt_description {
-  font-size: 1.5rem;
-  font-family: "Gaegu", sans-serif; /* google font */
-}
-
-.adopt_image {
-  height: 350px;
-  width: 350px;
-  cursor: pointer; /* makes the pointer to the images */
-  object-fit: cover;
-}
-
-/* .adopt_image:hover {
-  transform: scale(1.2);
-} */
-
-/* Pillars Section */
-.pillars_section {
-  background-color: #d3d6db;
-  padding: 3rem 10%; /* top, down is 3rem & left, right is 10% */
-}
-
-.pillars_heading {
-  text-align: center;
-  color: #ff1617;
-  font-size: 3rem;
-  font-family: "Gloria Hallelujah", sans-serif; /* google font */
-}
-
-.pillars_description {
-  text-align: center; /* center aligned texts */
-  font-size: 1.5rem;
-  font-family: "Gaegu", sans-serif; /* google font */
-}
-
-.pillars_cards {
-  display: flex;
-  margin: 5rem 0rem 2rem;
-}
-
-.pillars_card {
-  margin: 0rem 2rem;
-  background-color: #fff;
-  width: 33.333%;
-  cursor: pointer; /* makes the pointer to the images */
-  border-radius: 0.4rem;
-  overflow: hidden; /* makign images to take the border-radius property */
-  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
-}
-
-.pillars_card:hover {
-  transform: translateY(-4%); /* move up the card */
-  box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5); /* shadow of the card when hovered */
-}
-
-.pillars_card_image {
-  display: block;
-  width: 100%;
-  height: 15rem;
-  object-fit: cover;
-}
-
-.pillars_card_heading {
-  text-align: center;
-  color: #00adb5;
-  font-size: 2.3rem;
-  font-family: "Gloria Hallelujah", sans-serif; /* google font */
-  margin: 1rem 0;
-}
-
-.pillars_card_description {
-  text-align: center; /* center aligned texts */
-  font-size: 1.3rem;
-  font-family: "Gaegu", sans-serif; /* google font */
-  margin: 1rem 1rem;
-}
-
-/* Donation Section */
-.donation_section {
-  display: flex; /* make child boxes horizontal */
-  align-items: center; /* making all the child boxes center to each other in the parent box */
-  padding: 3rem 10%; /* top, down is 3rem & left, right is 10% */
-}
-
-.donation_image {
-  width: 350px;
-  height: 350px;
-  cursor: pointer; /* makes the pointer to the images */
-  object-fit: cover;
-  border-radius: 0.4rem;
-}
-
-.donation_lines {
-  text-align: center; /* center aligned texts */
-  margin-left: 5rem;
-}
-
-.donation_heading {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  font-family: "Gloria Hallelujah", sans-serif; /* google font */
-  color: #00adb5;
-}
-
-.donation_description {
-  font-size: 1.5rem;
-  font-family: "Gaegu", sans-serif; /* google font */
-}
-
-/* History Section */
-.history_section {
-  background-color: #d3d6db;
-  padding: 3rem 10%; /* top, down is 3rem & left, right is 10% */
-}
-
-.history_heading {
+.form_heading {
   color: #ff1617;
   text-align: center;
   font-size: 3rem;
   font-family: "Gloria Hallelujah", sans-serif; /* google font */
 }
 
-.history_images {
-  display: flex; /* making child boxes parallel */
-  justify-content: center; /* evenly space between the child boxes */
-}
-
-.history_images img {
-  height: 350px;
-  width: 350px;
-  object-fit: cover; /* fit the image in the given size */
-  border-radius: 0.4rem;
-  cursor: pointer; /* makes the pointer to the images */
-}
-
-.history_description {
-  font-size: 1.5rem;
-  font-family: "Gaegu", sans-serif; /* google font */
-  text-align: center;
-  padding-top: 4rem;
-  padding-bottom: 1.5rem;
-}
-
-/* Child Labour Section */
-.cl_section {
-  display: flex; /* make child boxes horizontal */
-  align-items: center; /* making all the child boxes center to each other in the parent box */
-  padding: 3rem 10%; /* top, down is 3rem & left, right is 10% */
-}
-
-.cl_lines {
-  text-align: center; /* center aligned texts */
-  margin-right: 5rem;
-}
-
-.cl_heading {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  font-family: "Gloria Hallelujah", sans-serif; /* google font */
-  color: #00adb5;
-}
-
-.cl_description {
-  font-size: 1.5rem;
-  font-family: "Gaegu", sans-serif; /* google font */
-}
-
-.cl_image {
-  height: 350px;
-  width: 350px;
-  cursor: pointer; /* makes the pointer to the images */
-  border-radius: 0.4rem;
-}
-
-/* .cl_image:hover {
-  transform: scale(1.2);
-} */
-
-/* Contact Section */
-.contact_section {
-  background-color: #d3d6db;
-  padding: 3rem 10%; /* top, down is 3rem & left, right is 10% */
-}
-
-.contact_heading {
-  color: #ff1617;
-  text-align: center;
-  font-size: 3rem;
-  font-family: "Gloria Hallelujah", sans-serif; /* google font */
-}
-
-.contact_description {
+.form_description {
   text-align: center; /* center aligned texts */
   font-size: 1.5rem;
   font-family: "Gaegu", sans-serif; /* google font */
 }
 
-.contact_form {
+.meeting_form {
   width: 80%;
   background-color: #fff;
   margin: 3rem auto;
@@ -382,6 +181,22 @@ header {
 
 .contact_textbox textarea {
   resize: none;
+}
+
+.contact_label {
+  font-size: 2rem;
+  font-family: "Gaegu", sans-serif; /* google font */
+}
+
+.contact_textbox_selectors {
+  font-size: 1.5rem;
+  font-family: "Gaegu", sans-serif; /* google font */
+  padding: 0.5rem 0rem;
+}
+
+.contact_date_input {
+  font-family: "Gaegu", sans-serif; /* google font */
+  padding: 0.5rem 0rem;
 }
 
 .contact_button {
