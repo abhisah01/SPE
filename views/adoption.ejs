@@ -30,9 +30,10 @@
       <nav>
         <ul class="nav_links">
           <!-- <li class="nav_item"><a href="#">About Us</a></li> -->
-          <li class="nav_item"><a href="adoption.html">Adoption</a></li>
-          <li class="nav_item"><a href="donation.html">Donation</a></li>
-          <li class="nav_item"><a href="child_labour.html">Child Labour</a></li>
+          <li class="nav_item"><a href="/">Home</a></li>
+          <li class="nav_item"><a href="/adoption">Adoption</a></li>
+          <li class="nav_item"><a href="/donation">Donation</a></li>
+          <li class="nav_item"><a href="/child_labour">Child Labour</a></li>
           <!-- <li class="nav_item"><a href="#">Contact Us</a></li> -->
         </ul>
       </nav>
@@ -79,46 +80,46 @@
 
       <p class="form_description" style="padding-top: 1rem;"><strong>Note:- Please bring all your proof documents.</strong></p>
 
-      <form class="meeting_form" action="#" method="post">
+      <form class="meeting_form" action="/adoption" method="post">
 
         <div class="contact_textbox">
-          <input type="text" name="" value="" placeholder="FULL NAME">
+          <input type="text" name="fullname" value="" placeholder="FULL NAME*" required>
         </div>
 
         <label class="contact_label" for="">Gender</label>
         <div class="contact_textbox_selectors">
-          <input type="radio" name="gender" value="male"> Male
+          <input type="radio" name="gender" value="male" required> Male
           <input type="radio" name="gender" value="female"> Female
         </div>
 
         <label class="contact_label" for="">Married</label>
         <div class="contact_textbox_selectors">
-          <input type="radio" name="married" value="male"> Yes
-          <input type="radio" name="married" value="female"> No
+          <input type="radio" name="marriage" value="yes" required> Yes
+          <input type="radio" name="marriage" value="no"> No
         </div>
 
         <div class="contact_textbox">
-          <input type="number" name="" value="" placeholder="AGE">
+          <input type="number" name="age" value="" placeholder="AGE*(ENTER BETWEEN 25 AND 50)" required>
         </div>
 
         <div class="contact_textbox">
-          <input type="email" name="" value="" placeholder="EMAIL">
+          <input type="email" name="email" value="" placeholder="EMAIL">
         </div>
 
         <div class="contact_textbox">
-          <input type="text" name="" value="" placeholder="ADDRESS">
+          <input type="text" name="address" value="" placeholder="ADDRESS">
         </div>
 
         <div class="contact_textbox">
-          <input type="text" name="" value="" placeholder="YOUR JOB DESCRIPTION">
+          <input type="text" name="job" value="" placeholder="YOUR JOB DESCRIPTION">
         </div>
 
         <div class="contact_textbox">
-          <input type="number" name="" value="" placeholder="YOUR ANNUAL INCOME">
+          <input type="number" name="income" value="" placeholder="YOUR ANNUAL INCOME*" required>
         </div>
 
         <div class="contact_textbox">
-          <input type="number" name="" value="" placeholder="PHONE NUMBER">
+          <input type="number" name="phonenumber" value="" placeholder="PHONE NUMBER*" required>
         </div>
 
         <label class="contact_label" for="">Your preferred date for meeting</label>
@@ -128,16 +129,16 @@
 
         <label class="contact_label" for="">Your preferred time for meeting</label>
         <div class="contact_textbox_selectors">
-          <input type="radio" name="gender" value="male"> Morning
-          <input type="radio" name="gender" value="female"> Afternoon
-          <input type="radio" name="gender" value="other"> Evening
+          <input type="radio" name="time" value="morning" required> Morning
+          <input type="radio" name="time" value="afternoon"> Afternoon
+          <input type="radio" name="time" value="evening"> Evening
         </div>
 
         <div class="contact_textbox">
-          <textarea name="" rows="9" placeholder="REASON FOR ADOPTION"></textarea>
+          <textarea name="reason" rows="9" placeholder="REASON FOR ADOPTION"></textarea>
         </div>
 
-        <a class="contact_button" href="#">BOOK</a>
+        <button class="contact_button" name="book">BOOK</button>
 
       </form>
 

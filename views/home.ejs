@@ -30,9 +30,10 @@
       <nav>
         <ul class="nav_links">
           <!-- <li class="nav_item"><a href="#">About Us</a></li> -->
-          <li class="nav_item"><a href="adoption.html">Adoption</a></li>
-          <li class="nav_item"><a href="donation.html">Donation</a></li>
-          <li class="nav_item"><a href="child_labour.html">Child Labour</a></li>
+          <li class="nav_item"><a href="/">Home</a></li>
+          <li class="nav_item"><a href="/adoption">Adoption</a></li>
+          <li class="nav_item"><a href="/donation">Donation</a></li>
+          <li class="nav_item"><a href="/child_labour">Child Labour</a></li>
           <!-- <li class="nav_item"><a href="#">Contact Us</a></li> -->
         </ul>
       </nav>
@@ -170,25 +171,25 @@
 
       <p class="contact_description">If you would like to contact our organization, if you have any questions/concerns/thoughts/suggestions, feel free to contact us using the form below. We would love to hear from you and will endeavor to reply as soon as possible.</p>
 
-      <form class="contact_form" action="#" method="post">
+      <form class="contact_form" action="/" method="post">
 
         <div class="contact_textbox">
-          <input type="text" name="" value="" placeholder="FULL NAME">
+          <input type="text" name="fullname" value="" placeholder="FULL NAME*" required>
         </div>
 
         <div class="contact_textbox">
-          <input type="email" name="" value="" placeholder="EMAIL">
+          <input type="email" name="email" value="" placeholder="EMAIL">
         </div>
 
         <div class="contact_textbox">
-          <input type="text" name="" value="" placeholder="SUBJECT">
+          <input type="text" name="subject" value="" placeholder="SUBJECT*" required>
         </div>
 
         <div class="contact_textbox">
-          <textarea name="" rows="9" placeholder="YOUR MESSAGE"></textarea>
+          <textarea name="textarea" rows="9" placeholder="YOUR MESSAGE"></textarea>
         </div>
 
-        <a class="contact_button" href="#">SEND</a>
+        <button class="contact_button" name="send">SEND</button>
 
       </form>
 
@@ -205,6 +206,7 @@
         <a class="footer_gmail" href="#"><i class="social-icon fas fa-envelope"></i></a>
       </div>
       <p class="footer_copyright">© Copyright 2021 - Care Taker</p>
+      <p class="date"><%= date %></p>
 
     </footer>
 

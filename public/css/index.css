@@ -11,6 +11,12 @@
   transition: 1s; /* transition when the page is opened */
 }
 
+.date{
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+
 .horizontal_line {
   width: 15%;
   border-style: dotted none none;

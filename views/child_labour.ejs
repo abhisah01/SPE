@@ -30,9 +30,10 @@
       <nav>
         <ul class="nav_links">
           <!-- <li class="nav_item"><a href="#">About Us</a></li> -->
-          <li class="nav_item"><a href="adoption.html">Adoption</a></li>
-          <li class="nav_item"><a href="donation.html">Donation</a></li>
-          <li class="nav_item"><a href="child_labour.html">Child Labour</a></li>
+          <li class="nav_item"><a href="/">Home</a></li>
+          <li class="nav_item"><a href="/adoption">Adoption</a></li>
+          <li class="nav_item"><a href="/donation">Donation</a></li>
+          <li class="nav_item"><a href="/child_labour">Child Labour</a></li>
           <!-- <li class="nav_item"><a href="#">Contact Us</a></li> -->
         </ul>
       </nav>
@@ -77,30 +78,30 @@
 
       <p class="form_description">If you see this happening anywhere, please report us and we will try our best to help them and help them to live a better life.</p>
 
-      <form class="meeting_form" action="#" method="post">
+      <form class="meeting_form" action="/child_labour" method="post">
 
         <div class="contact_textbox">
-          <input type="text" name="" value="" placeholder="YOUR FULL NAME">
+          <input type="text" name="fullname" value="" placeholder="YOUR FULL NAME*" required>
         </div>
 
         <div class="contact_textbox">
-          <input type="email" name="" value="" placeholder="YOUR EMAIL">
+          <input type="email" name="email" value="" placeholder="YOUR EMAIL">
         </div>
 
         <div class="contact_textbox">
-          <input type="number" name="" value="" placeholder="YOUR PHONE NUMBER">
+          <input type="number" name="phone" value="" placeholder="YOUR PHONE NUMBER*" required>
         </div>
 
         <div class="contact_textbox">
-          <input type="text" name="" value="" placeholder="STATE WHERE YOU SAW THE CHILD">
+          <input type="text" name="state" value="" placeholder="STATE WHERE YOU SAW THE CHILD*" required>
         </div>
 
         <div class="contact_textbox">
-          <input type="text" name="" value="" placeholder="DISTRICT WHERE YOU SAW THE CHILD">
+          <input type="text" name="district" value="" placeholder="DISTRICT WHERE YOU SAW THE CHILD*" required>
         </div>
 
         <div class="contact_textbox">
-          <input type="text" name="" value="" placeholder="ADDRESS/LANDMARK WHERE YOU SAW THE CHILD">
+          <input type="text" name="landmark" value="" placeholder="ADDRESS/LANDMARK WHERE YOU SAW THE CHILD">
         </div>
 
         <label class="contact_label" for="">Image (if available)</label>
@@ -109,10 +110,10 @@
         </div>
 
         <div class="contact_textbox">
-          <textarea name="" rows="9" placeholder="DESCRIPTION OF THE CHILD"></textarea>
+          <textarea name="description" rows="9" placeholder="DESCRIPTION OF THE CHILD"></textarea>
         </div>
 
-        <a class="contact_button" href="#">COMPLAIN</a>
+        <button class="contact_button" name="complain">COMPLAIN</button>
 
       </form>
 
