@@ -2,11 +2,12 @@ const express = require("express");       // Package to look after request and r
 const bodyParser = require("body-parser");      // Package to parse the data from the HTML forms
 const ejs  =require("ejs");
 const mongoose = require("mongoose");         // package to connect to the database server
-const fs = require("fs");
+const multer = require("multer");             // package which creates a folder and store images there
+const path = require("path");                    // it gives a unique name to the uploaded image
+const logger = require("./config/logger");
 
 const app = express();
 
-//var imageData = fs.readFileSync('/path/to/file');
 
 mongoose.connect("mongodb://localhost:27017/homeDB", {useNewUrlParser: true, useUnifiedTopology: true});              // making the connection to db server
 
@@ -52,6 +53,8 @@ const adoptSchema = new mongoose.Schema({                              // layout
     income: Number,
     phonenumber: {
         type: Number,
+        min: 10,
+        max: 10,
         required: [true,"No contact number given!"]
     },
     date: Date,
@@ -69,11 +72,14 @@ const labourSchema = new mongoose.Schema({                             // layout
     email: String,
     phone: {
         type: Number,
+        min: 10,
+        max: 10,
         required: [true,"No contact number given!"]                     // Validators check to see that info is given by user
     },
     state: String,
     district: String,
     landmark: String,
+    filename: String,
     description: String
 });
 
@@ -87,6 +93,8 @@ app.use(bodyParser.urlencoded({extended: true}));        // to parse multiple in
 
 /////////////////////Request made to the home page//////////////////////////////
 app.get("/", function(req,res){
+
+    logger.info("Home page request");
     res.render("home",{date: date});
 });
 
@@ -94,6 +102,7 @@ app.get("/", function(req,res){
 
 /////////////////////Getting data from the contact us form////////////////////////
 app.post("/", function(req,res){
+
 
     const data = new Contact({
         fullname: req.body.fullname,
@@ -105,14 +114,25 @@ app.post("/", function(req,res){
      
     console.log(data);
 
-    data.save();
+    data.save(function(err,result){
 
-    res.sendFile(__dirname + "/success.html");
+        if(err){
+          logger.error(err);
+          res.sendFile(__dirname + "/failure.html");
+        }
+        else
+          res.sendFile(__dirname + "/success.html");
+    });
+
+    
 });
 
 
 ////////////////////Request made to the adoption page/////////////////////////////
 app.get("/adoption", function(req,res){
+
+    logger.info("Adoption page request");
+
     res.render("adoption");
 });
 
@@ -137,20 +157,44 @@ app.post("/adoption", function(req,res){
 
     console.log(data);
 
-    data.save();
+    data.save(function(err,result){
 
-    res.sendFile(__dirname + "/success.html");
+        if(err){
+          logger.error(err);
+          res.sendFile(__dirname + "/failure.html");
+        }
+        else
+          res.sendFile(__dirname + "/success.html");
+    });
 });
 
 
 /////////////////////Request made to the child labour page/////////////////////////
 app.get("/child_labour", function(req,res){
+
+    logger.info("Child labour page request");
+
     res.render("child_labour");
-})
+});
 
 
 ////////////////////Getting data from the child_labour form////////////////////////
-app.post("/child_labour", function(req,res){
+
+const Storage1 = multer.diskStorage({
+
+    destination: "./uploads",
+    filename: (req,file,cb)=>{
+        cb(null,file.fieldname+"_"+Date.now()+path.extname(file.originalname));
+    }
+});
+
+const upload = multer({
+    storage: Storage1
+
+}).single('filename');
+
+
+app.post("/child_labour",upload, function(req,res){
 
     const data= new Labour({
         fullname: req.body.fullname,
@@ -159,20 +203,28 @@ app.post("/child_labour", function(req,res){
         state: req.body.state,
         district: req.body.district,
         landmark: req.body.landmark,
-        filename: req.body.filename,
+        filename: req.file.filename,
         description: req.body.description
     });
 
     console.log(data);
 
-    data.save();
+    data.save(function(err,result){
 
-    res.sendFile(__dirname + "/success.html");
+        if(err){
+          logger.error(err);
+          res.sendFile(__dirname + "/failure.html");
+        }
+        else
+          res.sendFile(__dirname + "/success.html");
+    });
 });
 
 
 /////////////////////Request made to the donation page/////////////////////////////
 app.get("/donation", function(req,res){
+
+    logger.info("Donation page request");
 
     res.render("donation");
 });
@@ -194,7 +246,10 @@ app.get("/donation", function(req,res){
 ////////////////////Browser making a get request to our server at port 3000//////////////////////////
 
 app.listen(3000, function(){
+
     console.log("Server started on port 3000");
+
+    //logger.info("Server started on port 3000");
 });
 
 
