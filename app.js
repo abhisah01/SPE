@@ -53,8 +53,8 @@ const adoptSchema = new mongoose.Schema({                              // layout
     income: Number,
     phonenumber: {
         type: Number,
-        min: 10,
-        max: 10,
+      //  min: 10,
+      //  max: 12,
         required: [true,"No contact number given!"]
     },
     date: Date,
@@ -72,8 +72,8 @@ const labourSchema = new mongoose.Schema({                             // layout
     email: String,
     phone: {
         type: Number,
-        min: 10,
-        max: 10,
+      //  min: 10,
+      //  max: 12,
         required: [true,"No contact number given!"]                     // Validators check to see that info is given by user
     },
     state: String,
@@ -94,7 +94,7 @@ app.use(bodyParser.urlencoded({extended: true}));        // to parse multiple in
 /////////////////////Request made to the home page//////////////////////////////
 app.get("/", function(req,res){
 
-    logger.info("Home page request");
+  logger.info("Home page request");
     res.render("home",{date: date});
 });
 
@@ -120,8 +120,10 @@ app.post("/", function(req,res){
           logger.error(err);
           res.sendFile(__dirname + "/failure.html");
         }
-        else
+        else{
+          logger.info("Entry saved for contact-us");
           res.sendFile(__dirname + "/success.html");
+        }
     });
 
     
@@ -163,8 +165,11 @@ app.post("/adoption", function(req,res){
           logger.error(err);
           res.sendFile(__dirname + "/failure.html");
         }
-        else
+        else{
+          logger.info("Meeting form entry saved");
           res.sendFile(__dirname + "/success.html");
+        }
+          
     });
 });
 
@@ -215,8 +220,10 @@ app.post("/child_labour",upload, function(req,res){
           logger.error(err);
           res.sendFile(__dirname + "/failure.html");
         }
-        else
+        else{
+          logger.info("child-labour entry saved");
           res.sendFile(__dirname + "/success.html");
+        }
     });
 });
 

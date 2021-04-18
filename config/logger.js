@@ -8,8 +8,10 @@ const logger = createLogger({
 
     transports: [
         new transports.File({
-            filename: 'info.log',
+            filename: 'logs.json',
+            //format: format.timestamp(),
             format: format.combine(format.timestamp(), format.json())
+            //json: false
         })
     ]
 });
