@@ -68,6 +68,14 @@ app.get("/adoption", function(req,res){
     res.render("adoption");
 });
 
+///////////////////Request made to the donate money page//////////////////////////
+app.get("/donate_money",function(req,res){
+
+    logger.info("Donate money page request");
+
+    res.render("donate_money");
+});
+
 
 /////////////////////Getting data from the book a meeting form//////////////////////
 app.post("/adoption", function(req,res){

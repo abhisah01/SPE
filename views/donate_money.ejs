@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- basic information for SEOs -->
+    <meta name="keywords" content="HTML, CSS & JavaScript" />
+    <meta name="author" content="Abhijeet Kumar & Rajnish Shonkhia" />
+    <meta
+      name="description"
+      content="You can donate here using your Credit/Debit Card in order to help our Organisation."
+    />
+
+    <!-- the character set used & the visible area of a webpage -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- website title logo -->
+    <link
+      rel="shortcut icon"
+      href="images/website_icon.png"
+      type="image/x-icon"
+    />
+
+    <!-- website title -->
+    <title>Donation - Money</title>
+
+    <!-- normalized css -->
+    <link rel="stylesheet" href="css/normalize.css" />
+
+    <!-- external css -->
+    <link rel="stylesheet" href="css/donate_money.css" />
+
+    <!-- font awesome icons -->
+    <script
+      src="https://kit.fontawesome.com/0918ad1c19.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul class="nav_bar">
+          <li class="nav_links"><a href="/adoption">Adoption</a></li>
+          <li class="nav_links"><a href="/donation">Donation</a></li>
+          <li class="nav_links"><a href="/child_labour">Child Labour</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="intro">
+      <h1 class="intro_heading">
+        We appreciate <i class="far fa-handshake"></i> every single penny that
+        you donate.
+      </h1>
+
+      <p class="intro_desc">
+        Please follow the given instructions for donation using Credit/Debit
+        Card. Our Organisation will also love to hear any suggestion from you.
+      </p>
+    </section>
+
+    <section class="donation">
+      <h3 class="form_heading_1">
+        <i class="fas fa-hand-holding-usd"></i> Donation Form
+      </h3>
+      <form class="donation_form" action="">
+        <div class="donor_details">
+          <div>
+            <label for="name"><i class="fa fa-user"></i> Your Full Name</label>
+          </div>
+          <div>
+            <input
+              type="text"
+              id="name"
+              name="fullname"
+              placeholder="Abhijeet Kumar"
+            />
+          </div>
+
+          <div>
+            <label for="donor_email"
+              ><i class="fa fa-envelope"></i> Email</label
+            >
+          </div>
+          <div>
+            <input
+              type="email"
+              id="donor_email"
+              name="d_email"
+              placeholder="abhijeet@example.com"
+            />
+          </div>
+        </div>
+
+        <h3 class="form_heading_2">Accepted Cards</h3>
+        <div class="icon-container">
+          <i class="fa fa-cc-visa" style="color: navy"></i>
+          <i class="fa fa-cc-amex" style="color: blue"></i>
+          <i class="fa fa-cc-mastercard" style="color: red"></i>
+        </div>
+
+        <div class="card_details">
+          <div>
+            <label for="cname">Name on Card</label>
+          </div>
+          <div>
+            <input
+              type="text"
+              id="cname"
+              name="cardname"
+              placeholder="Rajnish Shonkhia"
+            />
+          </div>
+
+          <div>
+            <label for="ccnum">Credit/Debit Card</label>
+          </div>
+          <div>
+            <input
+              type="text"
+              id="ccnum"
+              name="cardnumber"
+              placeholder="1111-2222-3333-4444"
+            />
+          </div>
+
+          <div>
+            <label for="expmonth">Expiry</label>
+          </div>
+          <div>
+            <input
+              type="text"
+              id="expmonth"
+              name="expmonth"
+              placeholder="MM / YYYY"
+            />
+          </div>
+
+          <div>
+            <label for="cvv">CVV</label>
+          </div>
+          <div>
+            <input type="text" id="cvv" name="cvv" placeholder="123" />
+          </div>
+
+          <div>
+            <label for="amount">Amount</label>
+          </div>
+          <div>
+            <input
+              type="text"
+              id="amount"
+              name="amount"
+              placeholder="in rupees"
+            />
+          </div>
+        </div>
+
+        <div class="form_submit">
+          <input type="submit" value="DONATE" />
+        </div>
+      </form>
+    </section>
+
+    <footer>
+      <div class="footer_logos">
+        <a class="footer_fb" href="#"
+          ><i class="social-icon fab fa-facebook-f"></i
+        ></a>
+        <a class="footer_tweeter" href="#"
+          ><i class="social-icon fab fa-twitter"></i
+        ></a>
+        <a class="footer_insta" href="#"
+          ><i class="social-icon fab fa-instagram"></i
+        ></a>
+        <a class="footer_youtube" href="#"
+          ><i class="social-icon fab fa-youtube"></i
+        ></a>
+        <a class="footer_gmail" href="#"
+          ><i class="social-icon fas fa-envelope"></i
+        ></a>
+      </div>
+      <p>© Copyright 2021 - Care Taker</p>
+    </footer>
+  </body>
+</html>
