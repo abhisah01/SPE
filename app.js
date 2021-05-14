@@ -11,7 +11,7 @@ const Meeting = require("./models/meeting");
 
 const app = express();
 
-mongoose.connect("mongodb://localhost:27017/homeDB", {useNewUrlParser: true, useUnifiedTopology: true});              // making the connection to db server
+mongoose.connect("mongodb://mongo:27017/homeDB", {useNewUrlParser: true, useUnifiedTopology: true});              // making the connection to db server
 
 const date = new Date();
 
